@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Article Page</title>
+    <link rel="stylesheet" href="/assets/css/achievement-articles.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+    <header class="image-header-film-festival">
+      <div class="header-content">
+        <h1 class="main-title">
+          SIKLAB: ENGLISH FILM FESTIVAL 2024
+        </h1>
+        <p class="sub-title">This is how we do it</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="side-panel">
+        <nav>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <article>
+          <section id="introduction" class="content-section">
+            <h2>SIKLAB: ENGLISH FILM FESTIVAL 2024</h2>
+            <p>
+             A MELC-based Culminating Activity in collaboration and integration of three English-related subjects namely:
+            </p>
+            <ul>
+               <li>Oral Communication in Context</li>
+               <li>21st Century Literature from the Philippines and the World, and </li>
+               <li>English for Academic and Professional Pursoses. </li>
+            </ul>
+          </section>
+
+          <section id="content" class="content-section">
+            <h2>People's Choice Award</h2>
+            <p>
+                The Film Poster with the most reactions by November 15, Friday, 5pm gets the prize.
+            </p>
+          </section>
+
+          <section id="gallery" class="content-section">
+            <h2>Gallery: Students in Action</h2>
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-5.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-6.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-7.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-8.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-9.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-10.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-11.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-12.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-13.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/film-festival/film-14.jpg"
+                    alt=""
+                  />
+                </div>
+                
+              </div>
+              <div class="carousel-description">
+                <div class="description-item active">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <ul class="carousel-list">
+                    
+                  </ul>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button id="prevBtn">&larr;</button>
+                <button id="nextBtn">&rarr;</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="conclusion" class="content-section">
+            <h2>PLACEHOLDER</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non debitis quasi ipsum omnis fuga. Non dignissimos explicabo voluptatibus commodi, esse repellendus cum doloribus saepe delectus accusamus quasi, reiciendis fuga!
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/achievement-articles.js"></script>
+  </body>
+</html>

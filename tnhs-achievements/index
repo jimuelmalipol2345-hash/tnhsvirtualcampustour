@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/achievements.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+    <section class="achievements">
+      <div class="title-container">
+        <h1 class="section-title">TNHS Achievements</h1>
+      </div>
+      <a
+        href="/tnhs-achievements/best-performing-school"
+        class="card-container"
+      >
+        <div class="card-background"></div>
+
+        <div class="card-overlay"></div>
+
+        <div class="card-content">
+          <h2>
+            DepEd Quezon’s 2nd Best Performing School
+            <span class="title-underline"></span>
+          </h2>
+          <p>September 12-14 in Lucban, Quezon.</p>
+        </div>
+      </a>
+
+      <a
+        href="/tnhs-achievements/niyogyugan-street-dance-champion"
+        class="card-container"
+      >
+        <div class="card-background card-background-street-dance"></div>
+
+        <div class="card-overlay"></div>
+
+        <div class="card-content">
+          <h2>
+            Street Dance Champion
+            <span class="title-underline"></span>
+          </h2>
+          <p>Niyogyugan Festival 2025</p>
+        </div>
+      </a>
+
+      <a
+        href="/tnhs-achievements/english-film-festival"
+        class="card-container"
+      >
+        <div class="card-background card-background-film-festival"></div>
+
+        <div class="card-overlay"></div>
+
+        <div class="card-content">
+          <h2>
+            SIKLAB: ENGLISH FILM FESTIVAL 2024
+            <span class="title-underline"></span>
+          </h2>
+          <p>SIKLAB 2024</p>
+        </div>
+      </a>
+    </section>
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script type="module" src="/assets/js/achievements.js"></script>
+  </body>
+</html>

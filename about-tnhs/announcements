@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Announcements & Dress Code</title>
+    <link rel="stylesheet" href="/assets/css/announcments.css" />
+  </head>
+  <body>
+    <!-- The content for the navbar will be loaded by navbar.js -->
+    <section id="navbar"></section>
+
+    <!-- Main Content -->
+    <main>
+      <section id="announcements" class="container">
+        <h1 class="section-title">School Announcements</h1>
+        <div class="announcement">
+          <div class="announcement-image">Image Placeholder</div>
+          <div class="announcement-content">
+            <h3>Mid-Term Examinations Schedule</h3>
+            <p class="date">October 15, 2025</p>
+            <p>
+              The mid-term examinations for all grade levels will be held from
+              November 3rd to November 7th. Please review the detailed schedule
+              sent to your emails and prepare accordingly. Good luck to all
+              students!
+            </p>
+          </div>
+        </div>
+        <div class="announcement">
+          <div class="announcement-image">Image Placeholder</div>
+          <div class="announcement-content">
+            <h3>Annual Sports Fest</h3>
+            <p class="date">October 10, 2025</p>
+            <p>
+              Get ready for our annual Sports Fest on November 21st! Sign-ups
+              for various events like basketball, volleyball, and track and
+              field are now open. Contact your class representatives to join.
+            </p>
+          </div>
+        </div>
+        <div class="announcement">
+          <div class="announcement-image">Image Placeholder</div>
+          <div class="announcement-content">
+            <h3>Parent-Teacher Conference</h3>
+            <p class="date">October 5, 2025</p>
+            <p>
+              The quarterly Parent-Teacher Conference will take place on October
+              25th. This is an important opportunity to discuss your child's
+              progress. Please book your slot with the respective teachers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dress-code" class="container">
+        <h1 class="section-title">School Dress Code</h1>
+        <div class="dress-code-container">
+          <div class="dress-code-card">
+            <div class="card-face card-front">
+              <div class="icon">👕</div>
+              <h3>Tops & Shirts</h3>
+            </div>
+            <div class="card-face card-back">
+              <h4>Guidelines for Tops:</h4>
+              <ul>
+                <li>Official school polo shirt must be worn.</li>
+                <li>Shirts must be tucked in at all times.</li>
+                <li>Undershirts must be plain white.</li>
+                <li>No logos or graphics other than the school's.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dress-code-card">
+            <div class="card-face card-front">
+              <div class="icon">👖</div>
+              <h3>Bottoms</h3>
+            </div>
+            <div class="card-face card-back">
+              <h4>Guidelines for Bottoms:</h4>
+              <ul>
+                <li>Official school slacks or skirts.</li>
+                <li>Skirts must be knee-length or longer.</li>
+                <li>No jeans, leggings, or shorts allowed.</li>
+                <li>Belts must be plain black or brown.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dress-code-card">
+            <div class="card-face card-front">
+              <div class="icon">👟</div>
+              <h3>Footwear</h3>
+            </div>
+            <div class="card-face card-back">
+              <h4>Guidelines for Footwear:</h4>
+              <ul>
+                <li>Shoes must be closed-toe and black.</li>
+                <li>Socks must be plain white and visible.</li>
+                <li>No sandals, slippers, or high heels.</li>
+                <li>Laces must be tied properly.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dress-code-carousel">
+        <div class="carousel" aria-label="horizontal carousel of images">
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/jhs-uniform.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/abm.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/epas.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/humss.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/lab-gown.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/stem.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/type-a.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/announcements/type-b.jpg" />
+            <h2></h2>
+            <h5></h5>
+          </div>
+        </div>
+
+        <nav class="carousel-nav">
+          <button
+            class="prev"
+            tabindex="0"
+            aria-label="Previous Slide"
+          ></button>
+          <button class="next" tabindex="0" aria-label="Next Slide"></button>
+          <div>1/8</div>
+        </nav>
+      </section>
+    </main>
+
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/announcements.js"></script>
+  </body>
+</html>

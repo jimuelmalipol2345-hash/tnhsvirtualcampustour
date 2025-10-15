@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #181818;
+  font-optical-sizing: auto;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+body,
+p {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.title-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+h1.section-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+/* The main card container */
+.card-container {
+  position: relative; /* Essential for positioning child elements */
+  width: 75%;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden; /* Clips the content that moves/scales outside the boundary */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5rem;
+}
+
+/* The background image element */
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/achievements/best-performing-school.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background.card-background-street-dance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/achievements/street-dance/header.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background.card-background-film-festival {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/achievements/film-festival/header.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Gradient overlay to make text readable */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* Container for all text content */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.card-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  position: relative; /* Allows positioning of child elements */
+  padding-bottom: 5px; /* Creates space for the underline */
+  display: inline-block; /* Ensures the underline is only as wide as the text */
+}
+
+.card-content a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* UPDATED: Style the underline as a child of h2 */
+.title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: white;
+  width: 0; /* Initial state for animation */
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  /* Initial state for animation: hidden */
+  opacity: 0;
+}
+
+/* Character and Marker Images */
+.character-img,
+.marker-icon {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none; /* Prevents images from interfering with mouse events */
+}
+
+.character-img {
+  bottom: 0;
+  right: 15px;
+  height: 130px;
+}
+
+.marker-icon {
+  bottom: 20px;
+  left: -10px;
+  height: 90px;
+  transform: rotate(-15deg);
+}

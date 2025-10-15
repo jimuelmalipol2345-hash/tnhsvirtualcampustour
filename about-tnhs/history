@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/history.css" />
+  </head>
+  <body>
+    <header id="navbar"></header>
+    <section class="first">
+      <div class="outer">
+        <div class="inner">
+          <div class="bg one">
+            <h2 class="section-heading">
+              Our Story, Our Legacy:<br />Uncovering the History of TNHS<br />Scroll
+              to continue<br /><span>&#8681;</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="second">
+      <div class="outer">
+        <div class="inner">
+          <div class="bg">
+            <h2 class="section-heading"></h2>
+            <p class="section-paragraph">
+              This page summarizes the history of Talipan National High School,
+              located in the developing barangay of Talipan between Pagbilao and
+              Lucena. Initially a community reliant on rice and coconut farming,
+              the growing population saw a need for a local high school. In
+              1973, through the efforts of then-Barangay Captain Rafael P.
+              Glorioso and a community petition, the Talipan Barangay High
+              School was established under Republic Act 6054. It started with 60
+              students managed by the elementary school principal, Mr. Reynaldo
+              Ladlad, and one pioneering teacher, Mr. Rodrigo G. Porta, who
+              handled nearly all subjects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third">
+      <div class="outer">
+        <div class="inner">
+          <div class="bg">
+            <h2 class="section-heading"></h2>
+            <p class="section-paragraph">
+              The school expanded over the years, adding more teachers and
+              celebrating its first graduation in 1976. A significant
+              development came with the implementation of RA 6655 under
+              President Corazon C. Aquino, which nationalized the teaching
+              positions and improved salaries. Despite challenges like classroom
+              shortages, which once led to it being called an "iskwater" school,
+              it continued to grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fourth">
+      <div class="outer">
+        <div class="inner">
+          <div class="bg">
+            <h2 class="section-heading"></h2>
+            <p class="section-paragraph">
+              Now known as Talipan National High School, it stands on a
+              0.6-hectare lot donated by the Quezon Provincial Government. The
+              school has received numerous infrastructure improvements,
+              including buildings funded by foreign (ESF, JICA) and local
+              sources, as well as computer units and a covered court from former
+              Governor Raffy P. Nantes and a computer laboratory from Governor
+              Jay-Jay Suarez.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fifth">
+      <div class="outer">
+        <div class="inner">
+          <div class="bg">
+            <h2 class="section-heading"></h2>
+            <p class="section-paragraph">
+              Under a series of dedicated principals, the school has garnered
+              significant accolades, including being named a Brigada Eskwela
+              Hall of Famer (2017), a Gawad Kalasag recipient (2016), and
+              recognized as a "Best Managed School." Key administrative
+              achievements include securing the school's land title and
+              improving the water supply system. Today, under the leadership of
+              its current Principal IV, G. Marina R. Abueva, the school
+              continues to advance and gain recognition in various fields.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script type="module" src="/assets/js/history.js"></script>
+  </body>
+</html>

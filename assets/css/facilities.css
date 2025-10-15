@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* Body background remains dark for header/footer */
+body {
+  background-color: #181818;
+  font-optical-sizing: auto;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+body,
+p {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff; /* Default color for elements outside the .container */
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* 1. Image Header Styling (Unchanged) */
+.image-header {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: 8rem;
+}
+.header-content {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.main-title {
+  font-size: 3.5rem;
+  font-family: inherit;
+  font-weight: 700;
+}
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* UPDATED: Main Content Layout with light background */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px; /* Added padding for internal spacing */
+  background-color: #f7f7f7;
+  border-radius: 10px; /* Softened edges */
+}
+
+/* 3. Left Side Panel Styling */
+.side-panel {
+  flex: 0 0 200px;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start; /* Aligns panel to the top of the container */
+  height: auto; /* Adjusted for sticky positioning */
+}
+
+.side-panel nav ul {
+  list-style: none;
+}
+
+/* UPDATED: Side panel link colors for light theme */
+.side-panel nav li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333333; /* Dark color for text */
+  font-weight: 600;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.side-panel nav li a:hover,
+.side-panel nav li a.active {
+  border-left-color: #0077cc; /* Accent color */
+  background-color: #ffffff;
+  transform: translateX(5px);
+  color: #0077cc; /* Accent color */
+}
+
+/* 2. Article Content Styling */
+.content {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.content-section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* UPDATED: Content font colors */
+.content-section h2 {
+  font-size: 2rem;
+  font-family: inherit;
+  color: #222222; /* Dark color for heading */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0; /* Light border */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.content-section p,
+.content-section li {
+  font-size: 1.1rem;
+  color: #555555; /* Dark grey for body text */
+}
+
+:root {
+  --w: 880px;
+  --h: 480px;
+}
+
+.carousel-container {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  background: #111;
+}
+
+.carousel-wrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-slide.active {
+  pointer-events: auto;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Thumbnails navigation */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 40;
+}
+
+.thumb {
+  width: 60px;
+  height: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.25s, border 0.25s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+}
+.thumb.active {
+  border: 2px solid #fff;
+  transform: scale(1.12);
+}
+
+.content-section li {
+  font-size: 1.1rem;
+  color: #555555; /* Dark grey for body text */
+}
+
+/* 4. Key Features Grid Styling */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e0e0e0;
+}
+
+.feature-card i {
+  color: #0077cc; /* Use the same accent color as the nav link */
+  margin-bottom: 15px;
+}
+
+.feature-card h4 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 0;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  :root {
+    --w: 92vw;
+    --h: 56vh;
+  }
+  .thumb {
+    width: 46px;
+    height: 30px;
+  }
+}

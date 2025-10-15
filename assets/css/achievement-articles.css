@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* Body background remains dark for header/footer */
+body {
+  background-color: #181818;
+  font-optical-sizing: auto;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+body,
+p {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff; /* Default color for elements outside the .container */
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* 1. Image Header Styling (Unchanged) */
+.image-header,
+.image-header-street-dance,
+.image-header-film-festival {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.image-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/images/achievements/best-performing/header.jpg")
+      no-repeat center center/cover;
+}
+.image-header-street-dance {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/images/achievements/street-dance/header.jpg")
+      no-repeat center center/cover;
+}
+.image-header-film-festival {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/images/achievements/film-festival/header.jpg")
+      no-repeat center center/cover;
+}
+.header-content {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.main-title {
+  font-size: 3.5rem;
+  font-family: inherit;
+  font-weight: 700;
+}
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* UPDATED: Main Content Layout with light background */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px; /* Added padding for internal spacing */
+  background-color: #f7f7f7;
+  border-radius: 10px; /* Softened edges */
+}
+
+/* 3. Left Side Panel Styling */
+.side-panel {
+  flex: 0 0 200px;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start; /* Aligns panel to the top of the container */
+  height: auto; /* Adjusted for sticky positioning */
+}
+
+.side-panel nav ul {
+  list-style: none;
+}
+
+/* UPDATED: Side panel link colors for light theme */
+.side-panel nav li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333333; /* Dark color for text */
+  font-weight: 600;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.side-panel nav li a:hover,
+.side-panel nav li a.active {
+  border-left-color: #0077cc; /* Accent color */
+  background-color: #ffffff;
+  transform: translateX(5px);
+  color: #0077cc; /* Accent color */
+}
+
+/* 2. Article Content Styling */
+.content {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.content-section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* UPDATED: Content font colors */
+.content-section h2 {
+  font-size: 2rem;
+  font-family: inherit;
+  color: #222222; /* Dark color for heading */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0; /* Light border */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.content-section p,
+.content-section li {
+  font-size: 1.1rem;
+  color: #555555; /* Dark grey for body text */
+}
+
+/* 4. Carousel Styling */
+.carousel-container {
+  display: flex;
+  gap: 30px;
+  min-height: 400px;
+  position: relative;
+}
+
+.carousel-slide {
+  flex: 1.5;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eeeeee;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-item {
+  display: none;
+}
+
+.description-item.active {
+  display: block;
+}
+
+/* UPDATED: Carousel font colors */
+.description-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 52%;
+  transform: translateX(-55%);
+}
+
+/* UPDATED: Carousel button styles for light theme */
+.carousel-controls button {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #333333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #0077cc;
+  color: #ffffff;
+  border-color: #0077cc;
+}
+
+ul.carousel-list {
+  padding-left: 1rem;
+}

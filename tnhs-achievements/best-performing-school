@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Article Page</title>
+    <link rel="stylesheet" href="/assets/css/achievement-articles.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+    <header class="image-header">
+      <div class="header-content">
+        <h1 class="main-title">
+          TNHS is DepEd Quezon’s 2nd Best Performing School
+        </h1>
+        <p class="sub-title">This is how we do it</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="side-panel">
+        <nav>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#talipeño-way">Talipeño Way</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <article>
+          <section id="introduction" class="content-section">
+            <h2>Introduction: A New Era of Education</h2>
+            <p>
+              Talipan National High School is DepEd Quezon’s 2nd Best Performing
+              School out of 96 competing secondary schools in this year’s
+              Division Schools Press Conference (DSPC) held on September 12-14
+              in Lucban, Quezon.
+            </p>
+          </section>
+
+          <section id="talipeño-way" class="content-section">
+            <h2>The Talipeño Way</h2>
+            <p>
+              For months, Talipeño Press campus journalists poured their time,
+              effort, and passion into campus journalism. They write not only to
+              compete but also to live out their love for truth and
+              storytelling.
+            </p>
+            <p>
+              All that dedication paid off as we proudly clinched Second Best
+              Performing School in this year's Division Schools Press Conference
+              (DSPC) held last September 12-14 in Lucban, Quezon. This is more
+              than a win because it is a testament to the Talipeño way of
+              writing with purpose, with heart, and with pride.
+            </p>
+
+            <p>
+              Now we carry the same fire as we march to Rizal for the first-ever
+              Reconfigured Regional Schools Press Conference (RRSPC) JournCamp
+              in February next year.
+            </p>
+          </section>
+
+          <section id="gallery" class="content-section">
+            <h2>Gallery: Students in Action</h2>
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/images/achievements/best-performing/champion.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/best-performing/radio-champ.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/best-performing/collab.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="carousel-description">
+                <div class="description-item active">
+                  <h3>BACK-TO-BACK CHAMPION</h3>
+                  <p>Radio Scriptwriting and Broadcasting Filipino</p>
+                  <ul class="carousel-list">
+                    <li>James Bryant T. Rustia</li>
+                    <li>Melo Dañez</li>
+                    <li>Jennevy Alarcon</li>
+                    <li>Karla Gabriel Cosip</li>
+                    <li>Samantha Claire Mendoza</li>
+                    <li>John Roi Alegre</li>
+                    <li>Theo Carurucan</li>
+                  </ul>
+                </div>
+                <div class="description-item">
+                  <h3>Radio Scriptwriting and Broadcasting English champion</h3>
+                  <ul class="carousel-list">
+                    <li>Samuel Geus Ayaay</li>
+                    <li>Allieyah Corporal</li>
+                    <li>Althea Relizan</li>
+                    <li>Julia Sendai Escleto</li>
+                    <li>Dydrae Lavayne Genicera</li>
+                    <li>Maica Leynes</li>
+                    <li>Jhared Gonzales</li>
+                  </ul>
+                </div>
+                <div class="description-item">
+                  <h3>Collaborative Desktop Publishing Filipino champion</h3>
+                  <ul class="carousel-list">
+                    <li>Simon Ken Ayaay</li>
+                    <li>Lady Kaizen Italia</li>
+                    <li>Alayssa Mae Francia</li>
+                    <li>Crisiadel Ashley Sogabo</li>
+                    <li>Kurt Matthew Marquez</li>
+                    <li>Maiia Julliene Pacomio</li>
+                    <li>Harry Cortez</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button id="prevBtn">&larr;</button>
+                <button id="nextBtn">&rarr;</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="conclusion" class="content-section">
+            <h2>Conclusion: Talaga Namang Husay Sumasabay</h2>
+            <p>
+              In conclusion, Talipan National High School's achievement as the
+              Second Best Performing School is not merely a competition result,
+              but a powerful affirmation of the "Talipeño Way." This victory,
+              born from passion and purposeful storytelling, ignites a
+              determined spirit as the campus journalists advance to the
+              Regional Schools Press Conference, ready to embrace the challenges
+              ahead and champion the truth.
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/achievement-articles.js"></script>
+  </body>
+</html>

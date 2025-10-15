@@ -1,0 +1,308 @@
+/* --- Base Styles from index.css --- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* Base heading styles (color will be overridden inside .faculty-main) */
+h1 {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* UPDATED: Body background remains dark for header/footer */
+body {
+  background-color: #181818;
+  font-optical-sizing: auto;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+/* Base font styles (color will be overridden inside .faculty-main) */
+body,
+p {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* --- Specific Styles for faculty.html --- */
+
+/* UPDATED: Main content area gets a light background */
+.faculty-main {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 40px 0;
+  background-color: #f7f7f7;
+}
+
+/* Header Section */
+.faculty-header {
+  text-align: center;
+  margin: 100px 0 60px 0;
+  padding: 0 20px;
+}
+
+/* UPDATED: Header font colors for light background */
+.faculty-header h1 {
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.faculty-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555555;
+  font-size: 18px;
+}
+
+/* --- Carousel Styles --- */
+.carousel-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-slider {
+  display: flex;
+}
+
+/* UPDATED: Faculty card styles for light theme */
+.faculty-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* A more subtle shadow for the light theme */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  width: 350px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eeeeee;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faculty-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.faculty-info {
+  padding: 25px;
+}
+
+/* UPDATED: Card font colors */
+.faculty-info h3 {
+  color: #222222;
+  margin-bottom: 5px;
+}
+
+.faculty-info h4 {
+  color: #0077cc; /* A slightly deeper blue for better contrast */
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.faculty-desc {
+  color: #666666;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.faculty-contact {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+}
+
+.faculty-contact a {
+  color: #0077cc;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.faculty-contact a:hover {
+  color: #005599;
+}
+
+/* UPDATED: Carousel button styles for light theme */
+.carousel-nav {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.carousel-nav button {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #333333;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.carousel-nav button:hover {
+  background-color: #0077cc;
+  color: #ffffff;
+  border-color: #0077cc;
+}
+
+.carousel-nav button:disabled {
+  background-color: #f0f0f0;
+  color: #aaaaaa;
+  cursor: not-allowed;
+  transform: scale(0.95);
+  border-color: #e0e0e0;
+}
+
+
+/* --- Modal Styles (Unchanged) --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.close-button:hover {
+  color: #bbb;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+/* --- FAQ Section Styles --- */
+.faq-section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222222;
+}
+
+/* UPDATED: Accordion styles for light theme */
+.accordion-item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f9f9f9;
+}
+
+.accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  color: #555555;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.accordion-content p {
+  padding: 0 20px 20px 20px;
+  color: #666666;
+}

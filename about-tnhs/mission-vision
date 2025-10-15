@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Mission & Vision | [Your School's Name]</title>
+    <link rel="stylesheet" href="/assets/css/mission-vision.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="main-title">Guiding Stars for a Bright Future</h1>
+        <p class="scroll-down-prompt">Scroll to discover our purpose</p>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="content-section vision-container">
+      <h2 class="section-title">Our Vision</h2>
+      <p class="section-text">
+        We dream of Filipinos who passionately love their country and whose
+        values and competencies enable them to realize their full potential and
+        contribute meaningfully to building the nation. As a learner-centered
+        public institution, the Department of Education continuously improves
+        itself to better serve its stakeholders.
+      </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="content-section mission-container">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-text">
+        To protect and promote the right of every Filipino to quality,
+        equitable, culture-based, and complete basic education where: Students
+        learn in a child-friendly, gender-sensitive, safe, and motivating
+        environment. Teachers facilitate learning and constantly nurture every
+        learner. Administrators and staff, as stewards of the institution,
+        ensure an enabling and supportive environment for effective learning to
+        happen. Family, community, and other stakeholders are actively engaged
+        and share responsibility for developing life-long learners.
+      </p>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="content-section core-values-container">
+      <h2 class="section-title">Our Core Values</h2>
+      <ul class="core-values-list">
+        <li>Maka-Diyos</li>
+        <li>Maka-tao</li>
+        <li>Makakalikasan</li>
+        <li>Makabansa</li>
+      </ul>
+    </section>
+
+    <!-- Mandate Section -->
+    <section class="content-section mandate-container">
+      <h2 class="section-title">Our Mandate</h2>
+      <p class="section-text">
+        The Department of Education was established through the Education Decree
+        of 1863 as the Superior Commission of Primary Instruction under a
+        Chairman. The Education agency underwent many reorganization efforts in
+        the 20th century in order to better define its purpose vis a vis the
+        changing administrations and charters. The present day Department of
+        Education was eventually mandated through Republic Act 9155, otherwise
+        known as the Governance of Basic Education act of 2001 which establishes
+        the mandate of this agency.
+        <br />
+        <br />
+        The Department of Education (DepEd) formulates, implements, and
+        coordinates policies, plans, programs and projects in the areas of
+        formal and non-formal basic education. It supervises all elementary and
+        secondary education institutions, including alternative learning
+        systems, both public and private; and provides for the establishment and
+        maintenance of a complete, adequate, and integrated system of basic
+        education relevant to the goals of national development.
+      </p>
+    </section>
+     <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/mission-vision.js"></script>
+  </body>
+</html>

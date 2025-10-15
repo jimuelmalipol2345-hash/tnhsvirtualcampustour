@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Article Page</title>
+    <link rel="stylesheet" href="/assets/css/achievement-articles.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+    <header class="image-header-street-dance">
+      <div class="header-content">
+        <h1 class="main-title">
+          Stree Dance Champion
+        </h1>
+        <p class="sub-title">This is how we do it</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="side-panel">
+        <nav>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <article>
+          <section id="introduction" class="content-section">
+            <h2>ALL HAIL THE CHAMPION — PAGBILAO!</h2>
+            <p>
+              Talipan National High School is DepEd Quezon’s 2nd Best Performing
+              School out of 96 competing secondary schools in this year’s
+              Division Schools Press Conference (DSPC) held on September 12-14
+              in Lucban, Quezon.
+            </p>
+          </section>
+
+          <section id="content" class="content-section">
+            <h2>Pagbilao’s 4th overall championship title</h2>
+            <p>
+                This remarkable victory marks Pagbilao’s 4th overall championship title. Truly, Pagbilao has cemented its place in Niyogyugan history as one of the festival’s powerhouses in performance and artistry. 
+            </p>
+
+            <p>
+                And the pride doesn’t stop there! 💚 The incredible performance that wowed the audience was brought to life by the talented students of Talipan National High School — the proud Talipeños! Their passion, energy, and discipline turned Pagbilao’s vision into a show-stopping masterpiece on the streets. 
+            </p>
+
+            <p>
+                This victory is a proud moment not only for the performers but for the entire town of Pagbilao, whose support and unity made this triumph possible. Truly, Pagbilao proves that champions may stumble, but they always rise stronger and brighter! 
+            </p>
+
+            <p>
+                To top it off, Pagbilao also bagged the coveted Best in Choreography Award, thanks to the Talipeños’ perfectly synchronized movements, dynamic formations, and captivating interpretation of Quezon Province’s rich coconut culture. Their routine wasn’t just a dance—it was a celebration of heritage, youth, and community pride! 
+            </p>
+
+            <p>
+                Congratulations, Pagbilao and the amazing Talipeños of Talipan National High School! Your win is an inspiration to all!
+            </p>
+          </section>
+
+          <section id="gallery" class="content-section">
+            <h2>Gallery: Students in Action</h2>
+            <div class="carousel-container">
+              <div class="carousel-slide">
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/images/achievements/street-dance/street-dance-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/street-dance/street-dance-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/street-dance/street-dance-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/images/achievements/street-dance/street-dance-4.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="carousel-description">
+                <div class="description-item active">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <ul class="carousel-list">
+                    
+                  </ul>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+                <div class="description-item">
+                  <h3>PLACE HOLDER</h3>
+                  <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, facilis. Consectetur modi fuga necessitatibus inventore asperiores, a error unde quod eligendi laudantium voluptatem atque soluta perspiciatis eveniet laborum, harum amet!
+                    </p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button id="prevBtn">&larr;</button>
+                <button id="nextBtn">&rarr;</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="conclusion" class="content-section">
+            <h2>PLACEHOLDER</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non debitis quasi ipsum omnis fuga. Non dignissimos explicabo voluptatibus commodi, esse repellendus cum doloribus saepe delectus accusamus quasi, reiciendis fuga!
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/achievement-articles.js"></script>
+  </body>
+</html>

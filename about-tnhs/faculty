@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Faculty - Campus Virtual Tour</title>
+    <link rel="stylesheet" href="/assets/css/faculty.css" />
+  </head>
+  <body>
+    <section id="navbar"></section>
+
+    <main class="faculty-main">
+      <header class="faculty-header">
+        <div class="header-content">
+          <h1>Meet Our Dedicated Faculty</h1>
+          <p>
+            The pillars of our institution, committed to nurturing the next
+            generation of leaders.
+          </p>
+        </div>
+      </header>
+
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-slider">
+            <div class="faculty-card">
+              <img
+                src="/assets/images/cropped-tnhs.png"
+                alt="Dr. Evelyn Reed"
+                class="faculty-img"
+              />
+              <div class="faculty-info">
+                <h3>Dr. Evelyn Reed</h3>
+                <h4>Professor of Computer Science</h4>
+                <p class="faculty-desc">
+                  With over 20 years of experience in machine learning, Dr. Reed
+                  is passionate about AI ethics and enjoys mentoring students in
+                  the robotics club.
+                </p>
+                <div class="faculty-contact">
+                  <a href="mailto:e.reed@university.edu"
+                    >e.reed@university.edu</a
+                  >
+                  <a href="#">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="faculty-card">
+              <img
+                src="/assets/images/cropped-tnhs.png"
+                alt="Mr. David Chen"
+                class="faculty-img"
+              />
+              <div class="faculty-info">
+                <h3>Mr. David Chen</h3>
+                <h4>Head of the Arts Department</h4>
+                <p class="faculty-desc">
+                  An accomplished painter and sculptor, Mr. Chen inspires
+                  creativity and critical thinking. He loves seeing students
+                  find their unique artistic voice.
+                </p>
+                <div class="faculty-contact">
+                  <a href="mailto:d.chen@university.edu"
+                    >d.chen@university.edu</a
+                  >
+                  <a href="#">Portfolio</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="faculty-card">
+              <img
+                src="/assets/images/cropped-tnhs.png"
+                alt="Dr. Maria Garcia"
+                class="faculty-img"
+              />
+              <div class="faculty-info">
+                <h3>Dr. Maria Garcia</h3>
+                <h4>Lead Physicist & Researcher</h4>
+                <p class="faculty-desc">
+                  Dr. Garcia's research in quantum mechanics has been published
+                  in numerous journals. She is an avid stargazer and runs the
+                  campus observatory.
+                </p>
+                <div class="faculty-contact">
+                  <a href="mailto:m.garcia@university.edu"
+                    >m.garcia@university.edu</a
+                  >
+                  <a href="#">ResearchGate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="faculty-card">
+              <img
+                src="/assets/images/cropped-tnhs.png"
+                alt="Dr. Samuel Jones"
+                class="faculty-img"
+              />
+              <div class="faculty-info">
+                <h3>Dr. Samuel Jones</h3>
+                <h4>Professor of History</h4>
+                <p class="faculty-desc">
+                  An expert in ancient civilizations, Dr. Jones makes history come alive in the classroom. He leads the annual study-abroad program to historical sites.
+                </p>
+                <div class="faculty-contact">
+                  <a href="mailto:s.jones@university.edu"
+                    >s.jones@university.edu</a
+                  >
+                  <a href="#">Blog</a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+          <button id="prevBtn">&larr;</button>
+          <button id="nextBtn">&rarr;</button>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              How can I schedule a meeting with a faculty member?
+            </button>
+            <div class="accordion-content">
+              <p>
+                The best way is to contact them directly via the email provided
+                in their profile. Most professors have office hours listed in
+                their course syllabus as well.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Are faculty members available for mentorship?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Absolutely! Many of our faculty members are actively involved in
+                student mentorship programs. You can reach out to them directly
+                or contact the student affairs office for more information.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              What are the primary research areas of the faculty?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Our faculty's research interests are diverse, spanning from
+                artificial intelligence and sustainable energy to modern
+                literature and historical studies. Please visit individual
+                department pages for more detailed information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="imageModal" class="modal-overlay">
+      <span class="close-button">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <button id="backToTop">&#8679;</button>
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+
+    <script type="module" src="/assets/js/faculty.js"></script>
+  </body>
+</html>
