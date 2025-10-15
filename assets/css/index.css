@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
 
+:root {
+  --muted: #a0a0a0;
+  --card: rgba(28, 28, 28, 0.95);
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +16,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -80,7 +87,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .header-content {
@@ -93,15 +100,13 @@ p {
   color: white;
   z-index: 1;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .header-content h1 {
   font-size: 54px;
   font-weight: bold;
   letter-spacing: 12px;
-  word-spacing: 0.1px;
-  text-decoration-color: red;
-  text-decoration-style: solid;
   text-shadow: rgba(0, 0, 0, 0.64) 0px 10px 10px;
   margin-top: -5px;
   margin-bottom: 0px;
@@ -112,7 +117,6 @@ p {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 4px;
-  word-spacing: 5px;
   text-shadow: rgb(0, 0, 0) 1px 2px 2px;
   color: #ffffff;
 }
@@ -124,14 +128,13 @@ p {
 }
 
 .header-content-animation {
-  opacity: 0; /* start invisible */
+  opacity: 0;
 }
-
 /* Header Section end */
 
 /* about us section start */
 .welcome-section {
-  background: #f7f7f7f7;
+  background: #f7f7f7;
 }
 .welcome-section .section {
   min-height: 40vh;
@@ -139,12 +142,13 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0rem 0rem 0rem 0rem;
+  padding: 2rem 1rem;
 }
 
 .welcome-section .container {
   max-width: 900px;
   width: 100%;
+  padding: 0 1rem;
 }
 
 h1.about-title {
@@ -152,14 +156,6 @@ h1.about-title {
   text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-
-/* .welcome-section .card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-   margin: 2rem 0;
-}  */
 
 .welcome-section .card h1 {
   margin-bottom: 1rem;
@@ -176,8 +172,8 @@ section.get-started {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f7f7f7f7;
-  padding: 0rem 0rem 4rem 0rem;
+  background: #f7f7f7;
+  padding: 4rem 1rem;
 }
 .cards-hover {
   display: grid;
@@ -195,11 +191,14 @@ section.get-started {
   transition: transform 0.3s ease;
 }
 
+.card-hover:hover {
+  transform: translateY(-8px);
+}
+
 .card-hover-image {
   position: relative;
   width: 100%;
   height: 275px;
-  overflow: visible; /* allow image bounce outside */
 }
 
 .card-hover-image img {
@@ -231,7 +230,7 @@ section.get-started {
 section.testimonials {
   display: flex;
   justify-content: center;
-  padding: 4rem 0rem;
+  padding: 4rem 1rem;
 }
 
 .wrap {
@@ -357,7 +356,7 @@ section.testimonials {
   cursor: pointer;
 }
 .dot.active {
-  background: #f7f7f7f7;
+  background: #f7f7f7;
   border-color: transparent;
 }
 
@@ -393,6 +392,75 @@ section.testimonials {
 /* infinite building tree start */
 section.building-tree {
   text-align: center;
-  background: #f7f7f7f7;
+  background: #f7f7f7;
 }
 /* infinite building tree end */
+
+
+/* ========== RESPONSIVE DESIGN FIXES ========== */
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .header-content h1 {
+    font-size: 40px;
+    letter-spacing: 6px;
+  }
+  .cards-hover {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .wrap {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 90vh;
+  }
+  .header-content h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+  .header-content h5 {
+    font-size: 16px;
+  }
+  .header-content p {
+    font-size: 14px;
+  }
+  .cards-hover {
+    grid-template-columns: 1fr;
+  }
+  .card-hover-image {
+    height: 220px;
+  }
+  .slide {
+    flex-direction: column;
+    text-align: center;
+  }
+  .avatar {
+    margin: 0 auto 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 26px;
+  }
+  .header-content h5 {
+    font-size: 14px;
+  }
+  .header-content p {
+    font-size: 13px;
+  }
+  .card-hover-image {
+    height: 180px;
+  }
+  .quote {
+    font-size: 13px;
+  }
+}
