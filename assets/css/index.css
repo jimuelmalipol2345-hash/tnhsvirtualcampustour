@@ -179,6 +179,68 @@ section.get-started {
   background: #f7f7f7f7;
   padding: 0rem 0rem 4rem 0rem;
 }
+  /* Responsive Design: Mobile, Tablet, Desktop */
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 15px;
+    }
+    .header {
+      height: 60vh;
+    }
+    .header-content h1 {
+      font-size: 32px;
+      letter-spacing: 4px;
+    }
+    .header-content h5 {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    .welcome-section .container {
+      max-width: 98vw;
+      padding: 0 8px;
+    }
+    .welcome-section .card h1 {
+      font-size: 22px;
+    }
+    .welcome-section .card p {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    html {
+      font-size: 17px;
+    }
+    .header {
+      height: 80vh;
+    }
+    .header-content h1 {
+      font-size: 40px;
+      letter-spacing: 8px;
+    }
+    .welcome-section .container {
+      max-width: 90vw;
+      padding: 0 16px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    html {
+      font-size: 18px;
+    }
+    .header {
+      height: 100vh;
+    }
+    .header-content h1 {
+      font-size: 54px;
+      letter-spacing: 12px;
+    }
+    .welcome-section .container {
+      max-width: 900px;
+      padding: 0;
+    }
+  }
 .cards-hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
