@@ -15,6 +15,15 @@ export default class Index {
       {src: 'assets/images/featured/7.jpg', caption: ''},
       {src: 'assets/images/featured/8.jpg', caption: ''},
       {src: 'assets/images/featured/9.jpg', caption: ''},
+     
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
+      {src: 'assets/images/featured/9.jpg', caption: ''},
     ];
     this.data = [
       {x: 71, y: 58, w: 400, h: 270},
