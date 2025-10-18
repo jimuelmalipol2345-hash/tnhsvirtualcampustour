@@ -16,14 +16,16 @@ const loadCSS = (href) => {
  * @returns {string} The footer HTML content.
  */
 const getFooterHTML = () => `
-  <div class="footer">
-    <div class="footer-img">
-      <img src="/assets/images/cropped-tnhs.png" alt="TNHS logo" />
-    </div>
-    <div class="footer-text">
-      <h5>Talipan National High School</h5>
-      <p>Sitio Fori Brgy. Talipan Pagbilao, Quezon</p>
-      <p>&copy; 2025 Talipan National High School. All rights reserved.</p>
+  <div class="site-footer">
+    <div class="footer">
+      <div class="footer-img">
+        <img src="/assets/images/cropped-tnhs.png" alt="TNHS logo" />
+      </div>
+      <div class="footer-text">
+        <h5>Talipan National High School</h5>
+        <p>Sitio Fori Brgy. Talipan Pagbilao, Quezon</p>
+        <p>&copy; 2025 Talipan National High School. All rights reserved.</p>
+      </div>
     </div>
   </div>
 `;
@@ -39,7 +41,7 @@ export function loadFooter() {
       console.error("Footer container with ID 'footer' was not found.");
       return;
     }
-    
+
     // Note: It's common for the container itself to be the <footer> tag
     // in your main HTML, e.g., <footer id="footer"></footer>.
     // The current setup will result in <div id="footer"><footer>...</footer></div>.

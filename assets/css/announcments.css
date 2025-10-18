@@ -8,28 +8,29 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: clamp(24px, 5vw, 36px);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: clamp(18px, 3.5vw, 22px);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: clamp(16px, 3vw, 18px);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -45,7 +46,7 @@ body {
 
 body,
 p {
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -61,13 +62,14 @@ main {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .section-title {
   text-align: center;
   margin-bottom: 50px;
   color: #222222;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Announcements Section --- */
@@ -81,18 +83,24 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   gap: 25px;
-  flex-direction: column; /* For mobile */
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
   .announcement {
-    flex-direction: row; /* For desktop */
+    flex-direction: row;
   }
 }
 
 .announcement-image {
   flex-shrink: 0;
-  width: 100%; /* For mobile */
+  width: 100%;
   max-width: 250px;
   height: 180px;
   background-color: #e9ecef;
@@ -102,46 +110,78 @@ main {
   justify-content: center;
   color: #6c757d;
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
 @media (min-width: 768px) {
   .announcement-image {
-    width: 250px; /* For desktop */
+    width: 250px;
   }
 }
 
 .announcement-content {
   flex-grow: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .announcement-content {
+    text-align: left;
+  }
 }
 
 .announcement-content h3 {
   color: #222;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-size: clamp(18px, 3.5vw, 22px);
 }
 
 .announcement-content .date {
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
   color: #d9534f;
   margin-bottom: 10px;
   font-style: italic;
+  font-weight: 500;
+}
+
+.announcement-content p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
 }
 
 /* --- Dress Code Section --- */
 .dress-code-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   perspective: 1000px;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .dress-code-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0;
+  }
 }
 
 .dress-code-card {
-  background-color: transparent; /* Background is on the faces */
+  background-color: transparent;
   border-radius: 15px;
   transform-style: preserve-3d;
   transition: transform 0.7s;
-  min-height: 350px;
+  min-height: 300px;
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .dress-code-card {
+    min-height: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .dress-code-card .card-face {
@@ -158,18 +198,26 @@ main {
   border-radius: 15px;
 }
 
+@media (max-width: 767px) {
+  .dress-code-card .card-face {
+    padding: 15px;
+  }
+}
+
 .card-front {
   background: linear-gradient(135deg, #5bc0de, #428bca);
   color: #ffffff;
 }
 
 .card-front .icon {
-  font-size: 60px;
+  font-size: clamp(45px, 8vw, 60px);
 }
 
 .card-front h3 {
   color: #ffffff;
   margin-top: 15px;
+  font-size: clamp(18px, 4vw, 24px);
+  text-align: center;
 }
 
 .card-back {
@@ -183,6 +231,9 @@ main {
 .card-back h4 {
   color: #428bca;
   margin-bottom: 10px;
+  font-size: clamp(16px, 3.5vw, 20px);
+  text-align: center;
+  width: 100%;
 }
 
 .card-back ul {
@@ -195,6 +246,15 @@ main {
   margin-bottom: 8px;
   position: relative;
   padding-left: 20px;
+  font-size: clamp(13px, 2.8vw, 15px);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .card-back li {
+    margin-bottom: 6px;
+    padding-left: 18px;
+  }
 }
 
 .card-back li::before {
@@ -202,6 +262,7 @@ main {
   color: #5cb85c;
   position: absolute;
   left: 0;
+  font-size: clamp(12px, 2.5vw, 14px);
 }
 
 .dress-code-card.is-flipped {
@@ -218,11 +279,18 @@ section#dress-code-carousel {
   overflow: hidden;
   margin: 0 auto;
   background-color: #181818;
+  padding: 20px 10px;
+}
+
+@media (min-width: 768px) {
+  section#dress-code-carousel {
+    padding: 20px;
+  }
 }
 
 .carousel {
-  width: 50vw;
-  height: 90vh;
+  width: 90vw;
+  height: 70vh;
   gap: 10px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -230,9 +298,23 @@ section#dress-code-carousel {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (min-width: 768px) {
+  .carousel {
+    width: 50vw;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 95vw;
+    height: 60vh;
+  }
+}
+
 .carousel-slide {
   position: relative;
-  flex: 0 0 75%;
+  flex: 0 0 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,6 +322,18 @@ section#dress-code-carousel {
   color: white;
   scroll-snap-align: center;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    flex: 0 0 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    flex: 0 0 95%;
+  }
 }
 
 .carousel-slide img {
@@ -255,19 +349,23 @@ section#dress-code-carousel {
 h2 {
   position: relative;
   margin: 0;
-  font-size: 1.8rem;
+  font-size: clamp(20px, 4vw, 28px);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h5 {
   position: relative;
   margin: 2% 0 0 0;
-  font-size: 1rem;
+  font-size: clamp(14px, 2.5vw, 16px);
   font-weight: 100;
   letter-spacing: 0.3px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-nav {
-  display: none; /* displayed in the JS */
+  display: none;
   position: absolute;
   width: 100%;
 }
@@ -275,11 +373,12 @@ h5 {
 .carousel-nav button {
   cursor: pointer;
   border: none;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   position: absolute;
   aspect-ratio: 1.5;
-  width: 7vw;
+  width: 10vw;
   max-width: 75px;
+  min-width: 40px;
   height: auto;
   max-height: 3.7vh;
   background-color: transparent;
@@ -288,13 +387,40 @@ h5 {
   background-image: url("data:image/svg+xml,%3Csvg stroke='%23fff' fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 1 22 15'%3E%3Cpath d='M2,11 11,2 20,11'/%3E%3C/svg%3E");
 }
 
+@media (max-width: 768px) {
+  .carousel-nav button {
+    width: 15vw;
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-nav button {
+    width: 20vw;
+    min-width: 60px;
+  }
+}
+
 .prev {
   transform: translateY(-50%) rotate(-90deg);
+  left: 5px;
+}
+
+@media (max-width: 480px) {
+  .prev {
+    left: 2px;
+  }
 }
 
 .next {
   transform: translateY(-50%) rotate(90deg);
-  right: 0;
+  right: 5px;
+}
+
+@media (max-width: 480px) {
+  .next {
+    right: 2px;
+  }
 }
 
 .carousel-nav div {
@@ -306,12 +432,19 @@ h5 {
   font-weight: 200;
   opacity: 0.5;
   letter-spacing: 0.25rem;
-  font-size: clamp(22px, 3.9vw, 44px);
+  font-size: clamp(18px, 3.9vw, 44px);
 }
 
-/* Simplify the scroll bar appearance */
+@media (max-width: 480px) {
+  .carousel-nav div {
+    top: 30vh;
+    letter-spacing: 0.15rem;
+  }
+}
+
+/* Responsive scrollbar */
 ::-webkit-scrollbar {
-  height: 13px;
+  height: clamp(8px, 2vw, 13px);
 }
 
 ::-webkit-scrollbar-track {
@@ -319,7 +452,7 @@ h5 {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-top: 6px solid #000;
+  border-top: clamp(3px, 1vw, 6px) solid #000;
   background: #555;
   width: 50%;
 }
@@ -328,8 +461,50 @@ h5 {
   background: #bbb;
 }
 
-@media only screen and (max-width: 768px) {
-  .footer-chc > .border-t-\[1px\] > div:last-child {
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .footer-chc>.border-t-\[1px\]>div:last-child {
     padding-bottom: 32px;
+  }
+
+  /* Additional mobile improvements */
+  .announcement {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .dress-code-card {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement {
+    margin-bottom: 15px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .announcement-image {
+    height: 150px;
+  }
+
+  .dress-code-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 360px) {
+  .announcement {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .announcement-image {
+    height: 130px;
+  }
+
+  .dress-code-card {
+    min-height: 260px;
   }
 }
