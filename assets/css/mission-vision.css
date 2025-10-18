@@ -64,18 +64,22 @@ p {
   color: white;
   /* Placeholder Image - Replace with a photo of your school */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/images/featured/2.jpg")
-      center/cover no-repeat;
+    url("/assets/images/featured/2.jpg") center/cover no-repeat;
+  padding: 0 20px;
+  /* Add horizontal padding for mobile */
+  margin-top: 72px;
+  /* Account for fixed navbar */
 }
 
 .hero-content .main-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content .scroll-down-prompt {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   letter-spacing: 1px;
   opacity: 0.8;
 }
@@ -90,14 +94,16 @@ p {
   align-items: center;
   padding: 5rem 2rem;
   text-align: center;
-  overflow: hidden; /* Prevents elements from appearing before animation */
+  overflow: hidden;
+  /* Prevents elements from appearing before animation */
 }
 
 .section-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #222; /* Example school color */
+  color: #222;
+  /* Example school color */
   text-shadow: 1px 1px 0 #fff, 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -106,6 +112,8 @@ p {
   line-height: 1.8;
   max-width: 800px;
   color: #444;
+  text-align: left;
+  /* Better readability on mobile */
 }
 
 .core-values-list {
@@ -130,6 +138,7 @@ p {
   flex-basis: calc(50% - 2rem);
   min-width: 280px;
   color: #444;
+  font-weight: 500;
 }
 
 /* --- GSAP Animation Starting States --- */
@@ -160,4 +169,135 @@ p {
 .mandate-container .section-text {
   opacity: 0;
   transform: scale(0.9);
+}
+
+/* Mobile Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: 85vh;
+    margin-top: 60px;
+  }
+
+  .content-section {
+    min-height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .core-values-list li {
+    flex-basis: calc(100% - 1rem);
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    margin-top: 72px;
+    padding: 0 16px;
+  }
+
+  .hero-content .main-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    line-height: 1.2;
+  }
+
+  .hero-content .scroll-down-prompt {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    margin-top: 1.5rem;
+  }
+
+  .content-section {
+    padding: 3rem 1rem;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .section-text {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .core-values-list {
+    margin-top: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .core-values-list li {
+    padding: 0.8rem 1.2rem;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 60vh;
+    padding: 0 12px;
+  }
+
+  .hero-content .main-title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    line-height: 1.1;
+  }
+
+  .hero-content .scroll-down-prompt {
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
+    margin-top: 1rem;
+  }
+
+  .content-section {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-text {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    line-height: 1.6;
+  }
+
+  .core-values-list {
+    margin-top: 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .core-values-list li {
+    padding: 0.7rem 1rem;
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    min-width: auto;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section {
+    height: 55vh;
+    padding: 0 8px;
+  }
+
+  .content-section {
+    padding: 2rem 0.6rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 8vw, 1.8rem);
+  }
+
+  .section-text {
+    font-size: clamp(0.9rem, 4.5vw, 1rem);
+  }
+
+  .core-values-list li {
+    padding: 0.6rem 0.8rem;
+    font-size: clamp(0.85rem, 4.5vw, 0.95rem);
+  }
 }

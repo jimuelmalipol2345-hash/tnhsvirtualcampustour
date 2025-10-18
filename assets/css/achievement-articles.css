@@ -53,7 +53,8 @@ p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #ffffff; /* Default color for elements outside the .container */
+  color: #ffffff;
+  /* Default color for elements outside the .container */
 }
 
 p {
@@ -74,30 +75,33 @@ p {
   overflow: hidden;
   margin-top: 2rem;
 }
+
 .image-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/images/achievements/best-performing/header.jpg")
-      no-repeat center center/cover;
+    url("/assets/images/achievements/best-performing/header.jpg") no-repeat center center/cover;
 }
+
 .image-header-street-dance {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/images/achievements/street-dance/header.jpg")
-      no-repeat center center/cover;
+    url("/assets/images/achievements/street-dance/header.jpg") no-repeat center center/cover;
 }
+
 .image-header-film-festival {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/images/achievements/film-festival/header.jpg")
-      no-repeat center center/cover;
+    url("/assets/images/achievements/film-festival/header.jpg") no-repeat center center/cover;
 }
+
 .header-content {
   opacity: 0;
   transform: translateY(30px);
 }
+
 .main-title {
   font-size: 3.5rem;
   font-family: inherit;
   font-weight: 700;
 }
+
 .sub-title {
   font-size: 1.5rem;
   font-weight: 400;
@@ -109,9 +113,11 @@ p {
   display: flex;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 40px; /* Added padding for internal spacing */
+  padding: 40px;
+  /* Added padding for internal spacing */
   background-color: #f7f7f7;
-  border-radius: 10px; /* Softened edges */
+  border-radius: 10px;
+  /* Softened edges */
 }
 
 /* 3. Left Side Panel Styling */
@@ -119,8 +125,10 @@ p {
   flex: 0 0 200px;
   position: sticky;
   top: 40px;
-  align-self: flex-start; /* Aligns panel to the top of the container */
-  height: auto; /* Adjusted for sticky positioning */
+  align-self: flex-start;
+  /* Aligns panel to the top of the container */
+  height: auto;
+  /* Adjusted for sticky positioning */
 }
 
 .side-panel nav ul {
@@ -132,7 +140,8 @@ p {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333333; /* Dark color for text */
+  color: #333333;
+  /* Dark color for text */
   font-weight: 600;
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
@@ -141,10 +150,12 @@ p {
 
 .side-panel nav li a:hover,
 .side-panel nav li a.active {
-  border-left-color: #0077cc; /* Accent color */
+  border-left-color: #0077cc;
+  /* Accent color */
   background-color: #ffffff;
   transform: translateX(5px);
-  color: #0077cc; /* Accent color */
+  color: #0077cc;
+  /* Accent color */
 }
 
 /* 2. Article Content Styling */
@@ -163,9 +174,11 @@ p {
 .content-section h2 {
   font-size: 2rem;
   font-family: inherit;
-  color: #222222; /* Dark color for heading */
+  color: #222222;
+  /* Dark color for heading */
   margin-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0; /* Light border */
+  border-bottom: 2px solid #e0e0e0;
+  /* Light border */
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -173,7 +186,8 @@ p {
 .content-section p,
 .content-section li {
   font-size: 1.1rem;
-  color: #555555; /* Dark grey for body text */
+  color: #555555;
+  /* Dark grey for body text */
 }
 
 /* 4. Carousel Styling */
@@ -211,6 +225,144 @@ p {
   object-fit: cover;
 }
 
+/* Default (desktop/tablet): overlay centered at bottom of carousel */
+.carousel-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 40;
+  /* ensure above slide content */
+}
+
+/* Responsive article layout */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  .side-panel {
+    flex: 0 0 180px;
+  }
+
+  .content {
+    padding-left: 24px;
+  }
+
+  .carousel-container {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Stack sidebar above content */
+  .container {
+    display: block;
+    padding: 20px;
+  }
+
+  .side-panel {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .side-panel nav li a {
+    display: inline-block;
+    padding: 8px 12px;
+  }
+
+  .content {
+    padding-left: 0;
+  }
+
+  .image-header {
+    height: 48vh;
+  }
+
+  .main-title {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  /* Provide extra space inside each slide so controls placed after it won't overlap */
+  .carousel-slide {
+    padding-bottom: 56px;
+  }
+
+  .carousel-description {
+    width: 100%;
+  }
+
+  /* Place controls below carousel on mobile (override absolute rules) */
+  .carousel-container>.carousel-controls,
+  .carousel-controls {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    justify-content: center;
+    margin-top: 5px !important;
+    z-index: 10 !important;
+    /* keep above other stacked content but below fixed headers */
+  }
+
+  /* Keep carousel items absolutely positioned so JS (GSAP) can control visibility.
+     Use aspect-ratio on the slide to give a predictable height on small screens. */
+  .carousel-slide {
+    aspect-ratio: 16/9;
+    min-height: 220px;
+    /* fallback for older browsers */
+  }
+
+  .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 16px;
+  }
+
+  .side-panel {
+    margin-bottom: 12px;
+  }
+
+  .carousel-container {
+    min-height: 200px;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .carousel-controls {
+    margin-top: 36px;
+    margin-bottom: 0px;
+  }
+}
+
 .carousel-description {
   flex: 1;
   display: flex;
@@ -233,14 +385,20 @@ p {
   color: #222222;
 }
 
-.carousel-controls {
-  position: absolute;
-  bottom: 15px;
-  left: 52%;
-  transform: translateX(-55%);
+.carousel-controls button {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #333333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* UPDATED: Carousel button styles for light theme */
 .carousel-controls button {
   background-color: #ffffff;
   border: 1px solid #dddddd;

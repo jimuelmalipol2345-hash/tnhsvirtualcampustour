@@ -27,9 +27,9 @@ let sectionsData = sections.map((section) => {
     // Create SplitText for the paragraph only if a paragraph element exists
     splitParagraph: paragraph
       ? new SplitText(paragraph, {
-          type: "chars,words,lines",
-          linesClass: "clip-text",
-        })
+        type: "chars,words,lines",
+        linesClass: "clip-text",
+      })
       : null,
   };
 });

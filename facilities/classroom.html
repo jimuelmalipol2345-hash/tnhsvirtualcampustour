@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">``
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>School Article Page</title>
-    <link rel="stylesheet" href="/assets/css/facilities.css" />
-  </head>
-  <body>
-    <section id="navbar"></section>
-    <header>
-      <!-- <iframe
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>School Article Page</title>
+  <link rel="stylesheet" href="/assets/css/facilities.css" />
+</head>
+
+<body class="facility-page">
+  <section id="navbar"></section>
+  <header>
+    <!-- <iframe
         class="image-header"
         src="https://www.google.com/maps/embed?pb=!4v1759823832920!6m8!1m7!1sP52iZ92FIcqcutpBaTWSvg!2m2!1d13.96447846473709!2d121.656507168573!3f183.10009672896774!4f-2.1885879218366853!5f0.7820865974627469"
         width="100%"
@@ -20,102 +22,107 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe> -->
 
-      <iframe id="tour-embeded" name="TNHS virtual  campus tour clone" src="https://tour.panoee.net/iframe/68e63fa275771700081c7117" frameBorder="0" width="100%" height="400px" scrolling="no" allowvr="yes" allow="vr; xr; accelerometer; gyroscope; autoplay;" allowFullScreen="false" webkitallowfullscreen="false" mozallowfullscreen="false" loading="eager"></iframe>
-      <script>
-        var pano_iframe_name = "tour-embeded";
-        window.addEventListener("devicemotion", function(e){ var iframe = document.getElementById(pano_iframe_name); if (iframe) iframe.contentWindow.postMessage({ type:"devicemotion", deviceMotionEvent:{ acceleration:{ x:e.acceleration.x, y:e.acceleration.y, z:e.acceleration.z }, accelerationIncludingGravity:{ x:e.accelerationIncludingGravity.x, y:e.accelerationIncludingGravity.y, z:e.accelerationIncludingGravity.z }, rotationRate:{ alpha:e.rotationRate.alpha, beta:e.rotationRate.beta, gamma:e.rotationRate.gamma }, interval:e.interval, timeStamp:e.timeStamp } }, "*"); });
-      </script>
-      
-      
-    </header>
+    <iframe id="tour-embeded" name="TNHS virtual  campus tour clone"
+      src="https://tour.panoee.net/iframe/68e63fa275771700081c7117" frameBorder="0" width="100%" height="600px"
+      scrolling="no" allowvr="yes" allow="vr; xr; accelerometer; gyroscope; autoplay;" allowFullScreen="false"
+      webkitallowfullscreen="false" mozallowfullscreen="false" loading="eager"></iframe>
+    <script>
+      var pano_iframe_name = "tour-embeded";
+      window.addEventListener("devicemotion", function (e) { var iframe = document.getElementById(pano_iframe_name); if (iframe) iframe.contentWindow.postMessage({ type: "devicemotion", deviceMotionEvent: { acceleration: { x: e.acceleration.x, y: e.acceleration.y, z: e.acceleration.z }, accelerationIncludingGravity: { x: e.accelerationIncludingGravity.x, y: e.accelerationIncludingGravity.y, z: e.accelerationIncludingGravity.z }, rotationRate: { alpha: e.rotationRate.alpha, beta: e.rotationRate.beta, gamma: e.rotationRate.gamma }, interval: e.interval, timeStamp: e.timeStamp } }, "*"); });
+    </script>
 
-    <div class="container">
-      <aside class="side-panel">
-        <nav>
-          <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-          </ul>
-        </nav>
-      </aside>
 
-      <main class="content">
-        <article>
-          <section id="introduction" class="content-section">
-            <h2>TNHS Classrooms</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptatem deleniti dolorum, assumenda esse commodi deserunt
-              repellat officia? Eveniet quo sed odit possimus error voluptatibus
-              incidunt, reprehenderit quasi expedita? Reiciendis, doloremque.
-            </p>
-          </section>
+  </header>
 
-           <section id="features" class="content-section">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-              <div class="feature-card">
-                <i class="fa-solid fa-chalkboard-user fa-2x"></i>
-                <h4>Smart Projectors</h4>
-                <p>Equipped with state-of-the-art interactive projectors to enhance dynamic learning experiences.</p>
+  <div class="container">
+    <aside class="side-panel">
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <article>
+        <section id="introduction" class="content-section">
+          <h2>TNHS Classrooms</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptatem deleniti dolorum, assumenda esse commodi deserunt
+            repellat officia? Eveniet quo sed odit possimus error voluptatibus
+            incidunt, reprehenderit quasi expedita? Reiciendis, doloremque.
+          </p>
+        </section>
+
+        <section id="features" class="content-section">
+          <h2>Key Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+              <h4>Smart Projectors</h4>
+              <p>Equipped with state-of-the-art interactive projectors to enhance dynamic learning experiences.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fa-solid fa-wind fa-2x"></i>
+              <h4>Air Conditioned</h4>
+              <p>Fully air-conditioned spaces ensure a comfortable and conducive environment for study.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fa-solid fa-wifi fa-2x"></i>
+              <h4>High-Speed Wi-Fi</h4>
+              <p>Seamless and reliable internet access is available for all students and faculty members.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fa-solid fa-chair fa-2x"></i>
+              <h4>Ergonomic Seating</h4>
+              <p>Comfortable and modern seating arrangements designed to support long hours of focus and collaboration.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+          <h2>Gallery</h2>
+          <div class="carousel-container" id="carousel">
+            <div class="carousel-wrapper">
+              <div class="carousel-slide">
+                <img src="/assets/images/featured/3.JPG" alt="" />
               </div>
-              <div class="feature-card">
-                <i class="fa-solid fa-wind fa-2x"></i>
-                <h4>Air Conditioned</h4>
-                <p>Fully air-conditioned spaces ensure a comfortable and conducive environment for study.</p>
+              <div class="carousel-slide">
+                <img src="/assets/images/featured/4.jpg" alt="" />
               </div>
-              <div class="feature-card">
-                <i class="fa-solid fa-wifi fa-2x"></i>
-                <h4>High-Speed Wi-Fi</h4>
-                <p>Seamless and reliable internet access is available for all students and faculty members.</p>
+              <div class="carousel-slide">
+                <img src="/assets/images/featured/5.jpg" alt="" />
               </div>
-              <div class="feature-card">
-                <i class="fa-solid fa-chair fa-2x"></i>
-                <h4>Ergonomic Seating</h4>
-                <p>Comfortable and modern seating arrangements designed to support long hours of focus and collaboration.</p>
+              <div class="carousel-slide">
+                <img src="/assets/images/featured/7.jpg" alt="" />
               </div>
             </div>
-          </section>
+            <div class="carousel-nav"></div>
+          </div>
+        </section>
 
-          <section id="gallery" class="content-section">
-            <h2>Gallery</h2>
-            <div class="carousel-container" id="carousel">
-              <div class="carousel-wrapper">
-                <div class="carousel-slide">
-                  <img src="/assets/images/featured/3.JPG" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="/assets/images/featured/4.jpg" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="/assets/images/featured/5.jpg" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="/assets/images/featured/7.jpg" alt="" />
-                </div>
-              </div>
-              <div class="carousel-nav"></div>
-            </div>
-          </section>
+        <section id="conclusion" class="content-section">
+          <h2>Conclusion</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero
+            adipisci inventore exercitationem. Nisi totam libero officia,
+            doloribus, consequatur necessitatibus possimus labore a animi
+            delectus itaque quisquam porro explicabo ipsum.
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+  <button id="backToTop">&#8679;</button>
+  <div id="footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script type="module" src="/assets/js/facilities.js"></script>
+</body>
 
-          <section id="conclusion" class="content-section">
-            <h2>Conclusion</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero
-              adipisci inventore exercitationem. Nisi totam libero officia,
-              doloribus, consequatur necessitatibus possimus labore a animi
-              delectus itaque quisquam porro explicabo ipsum.
-            </p>
-          </section>
-        </article>
-      </main>
-    </div>
-    <button id="backToTop">&#8679;</button>
-    <div id="footer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="/assets/js/facilities.js"></script>
-  </body>
 </html>

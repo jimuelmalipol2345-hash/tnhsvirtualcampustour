@@ -55,16 +55,16 @@ p {
 }
 
 .title-container {
-    position: relative;
-    height: 300px;
-    width: 100%;
+  position: relative;
+  height: 300px;
+  width: 100%;
 }
 
 h1.section-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-title {
@@ -83,15 +83,23 @@ h1.section-title {
   min-height: 100vh;
   background-color: #f7f7f7;
   overflow: hidden;
+  padding-top: 72px;
+  /* ensure content clears fixed navbar */
 }
 
 /* The main card container */
 .card-container {
-  position: relative; /* Essential for positioning child elements */
+  position: relative;
+  display: block;
+  /* anchors behave like blocks for consistent sizing */
+  box-sizing: border-box;
+  /* Essential for positioning child elements */
   width: 75%;
+  /* Explicit height for cross-browser consistency */
   height: 600px;
   border-radius: 16px;
-  overflow: hidden; /* Clips the content that moves/scales outside the boundary */
+  overflow: hidden;
+  /* Clips the content that moves/scales outside the boundary */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin-bottom: 5rem;
 }
@@ -136,8 +144,9 @@ h1.section-title {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  height: 100%;
+  /* Darker gradient to improve legibility on busy images */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
 
@@ -154,9 +163,18 @@ h1.section-title {
 .card-content h2 {
   margin: 0 0 10px 0;
   font-size: 2.5rem;
-  position: relative; /* Allows positioning of child elements */
-  padding-bottom: 5px; /* Creates space for the underline */
-  display: inline-block; /* Ensures the underline is only as wide as the text */
+  position: relative;
+  /* Allows positioning of child elements */
+  padding-bottom: 5px;
+  /* Creates space for the underline */
+  display: inline-block;
+  /* Ensures the underline is only as wide as the text */
+}
+
+.card-content h2 {
+  color: #ffffff;
+  /* ensure title is white */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .card-content a {
@@ -171,14 +189,98 @@ h1.section-title {
   left: 0;
   height: 2px;
   background: white;
-  width: 0; /* Initial state for animation */
+  width: 0;
+  /* Initial state for animation */
 }
 
 .card-content p {
   margin: 0;
   font-size: 0.9rem;
   /* Initial state for animation: hidden */
-  opacity: 0;
+  opacity: 1;
+  /* make subtitle visible by default (helpful on touch devices) */
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive adjustments for achievements list/cards */
+@media (max-width: 1024px) {
+  .title-container {
+    height: 220px;
+  }
+
+  .card-container {
+    width: 90%;
+    height: 460px;
+    margin-bottom: 3rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    height: 160px;
+  }
+
+  /* On small screens use a fixed, consistent card height so all cards match */
+  .card-container {
+    width: calc(100% - 32px);
+    height: 260px;
+    /* fixed height for consistent boxes */
+    margin: 1.25rem 16px 2rem;
+    border-radius: 12px;
+  }
+
+  .card-background {
+    /* fill the fixed-height container */
+    height: 100%;
+    position: absolute;
+  }
+
+  .card-overlay {
+    height: 55%;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 16px;
+    color: #fff;
+    /* keep text white on mobile too */
+  }
+
+  .card-content h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    font-size: 1.6rem;
+  }
+
+  .card-content p {
+    color: rgba(255, 255, 255, 0.95);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-background {
+    height: 200px;
+  }
+
+  .card-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
 }
 
 /* Character and Marker Images */
@@ -186,7 +288,8 @@ h1.section-title {
 .marker-icon {
   position: absolute;
   z-index: 2;
-  pointer-events: none; /* Prevents images from interfering with mouse events */
+  pointer-events: none;
+  /* Prevents images from interfering with mouse events */
 }
 
 .character-img {
