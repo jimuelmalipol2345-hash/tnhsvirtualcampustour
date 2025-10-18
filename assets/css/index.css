@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
 
-:root {
-  --card: #1e1e1e;
-  --muted: #888;
-  --glass: rgba(255, 255, 255, 0.05);
-}
-
 *,
 *::before,
 *::after {
@@ -16,29 +10,28 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 h1 {
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: 36px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: 28px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
 h3 {
-  font-size: clamp(18px, 3.5vw, 22px);
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 h4 {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -54,7 +47,7 @@ body {
 
 body,
 p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: 16px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -87,8 +80,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
 }
 
 .header-content {
@@ -104,9 +96,9 @@ p {
 }
 
 .header-content h1 {
-  font-size: clamp(28px, 8vw, 54px);
+  font-size: 54px;
   font-weight: bold;
-  letter-spacing: clamp(2px, 2vw, 12px);
+  letter-spacing: 12px;
   word-spacing: 0.1px;
   text-decoration-color: red;
   text-decoration-style: solid;
@@ -118,22 +110,21 @@ p {
 
 .header-content h5 {
   font-weight: 700;
-  font-size: clamp(14px, 3vw, 20px);
-  letter-spacing: clamp(1px, 1vw, 4px);
-  word-spacing: clamp(2px, 1vw, 5px);
+  font-size: 20px;
+  letter-spacing: 4px;
+  word-spacing: 5px;
   text-shadow: rgb(0, 0, 0) 1px 2px 2px;
   color: #ffffff;
 }
 
 .header-content p {
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: 20px;
   text-shadow: rgb(0, 0, 0) 5px 1px 5px;
   color: #ffffff;
 }
 
 .header-content-animation {
-  opacity: 0;
-  /* start invisible */
+  opacity: 0; /* start invisible */
 }
 
 /* Header Section end */
@@ -142,7 +133,6 @@ p {
 .welcome-section {
   background: #f7f7f7f7;
 }
-
 .welcome-section .section {
   min-height: 40vh;
   display: flex;
@@ -155,7 +145,6 @@ p {
 .welcome-section .container {
   max-width: 900px;
   width: 100%;
-  padding: 0 20px;
 }
 
 h1.about-title {
@@ -164,19 +153,13 @@ h1.about-title {
   text-align: center;
 }
 
-.welcome-section .card {
+/* .welcome-section .card {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 3rem 2rem;
-  margin: 2rem 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.welcome-section .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+  padding: 2rem;
+   margin: 2rem 0;
+}  */
 
 .welcome-section .card h1 {
   margin-bottom: 1rem;
@@ -186,7 +169,6 @@ h1.about-title {
 .welcome-section .card p {
   color: #444;
 }
-
 /* about us section end */
 
 /* get-started start */
@@ -197,10 +179,9 @@ section.get-started {
   background: #f7f7f7f7;
   padding: 0rem 0rem 4rem 0rem;
 }
-
 .cards-hover {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   max-width: 1000px;
   padding: 20px;
@@ -211,20 +192,14 @@ section.get-started {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .card-hover-image {
   position: relative;
   width: 100%;
   height: 275px;
-  overflow: visible;
-  /* allow image bounce outside */
+  overflow: visible; /* allow image bounce outside */
 }
 
 .card-hover-image img {
@@ -233,39 +208,6 @@ section.get-started {
   object-fit: cover;
   border-bottom: 2px solid #eee;
   border-radius: 16px 16px 0 0;
-}
-
-/* Better image sizing for mobile */
-@media (max-width: 1024px) {
-  .card-hover-image img {
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
-    margin: 5% auto;
-    display: block;
-    border-bottom: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-hover-image {
-    height: 200px;
-    /* make the image block taller on phones */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card-hover-image img {
-    width: auto;
-    height: 85%;
-    /* increase icon size to 85% of container */
-    max-width: 90%;
-    /* ensure it doesn't overflow horizontally */
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-  }
 }
 
 .card-hover-content {
@@ -283,7 +225,6 @@ section.get-started {
   font-size: 0.95rem;
   color: #444;
 }
-
 /* get-started end */
 
 /* testimonials start */
@@ -296,22 +237,18 @@ section.testimonials {
 .wrap {
   max-width: 980px;
   width: 100%;
-  padding: 0 20px;
 }
-
 .testimonials-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
 }
-
 .testimonials-header h2 {
   margin: 0;
   font-size: 20px;
   letter-spacing: -0.2px;
 }
-
 .testimonials-header p {
   margin: 0;
   color: var(--muted);
@@ -326,12 +263,10 @@ section.testimonials {
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
   overflow: hidden;
 }
-
 .slides {
   position: relative;
   height: 220px;
 }
-
 .slide {
   position: absolute;
   inset: 0;
@@ -343,7 +278,6 @@ section.testimonials {
   gap: 20px;
   align-items: center;
 }
-
 .slide.active {
   opacity: 1;
   pointer-events: auto;
@@ -360,7 +294,6 @@ section.testimonials {
   justify-content: center;
   overflow: hidden;
 }
-
 .avatar img {
   width: 100%;
   height: 100%;
@@ -370,24 +303,20 @@ section.testimonials {
 .body {
   flex: 1;
 }
-
 .quote {
   font-size: 15px;
   line-height: 1.45;
   color: #e6eef6;
   margin-bottom: 12px;
 }
-
 .meta {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .name {
   font-weight: 600;
 }
-
 .role {
   color: var(--muted);
   font-size: 13px;
@@ -401,7 +330,6 @@ section.testimonials {
   align-items: center;
   gap: 8px;
 }
-
 .btn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -411,7 +339,6 @@ section.testimonials {
   cursor: pointer;
   font-size: 13px;
 }
-
 .btn:focus {
   outline: 2px solid rgba(6, 182, 212, 0.22);
 }
@@ -421,7 +348,6 @@ section.testimonials {
   gap: 8px;
   align-items: center;
 }
-
 .dot {
   width: 10px;
   height: 10px;
@@ -430,7 +356,6 @@ section.testimonials {
   border: 1px solid rgba(255, 255, 255, 0.06);
   cursor: pointer;
 }
-
 .dot.active {
   background: #f7f7f7f7;
   border-color: transparent;
@@ -441,7 +366,6 @@ section.testimonials {
   gap: 8px;
   margin-top: 12px;
 }
-
 .badge {
   background: rgba(255, 255, 255, 0.02);
   padding: 6px 10px;
@@ -456,241 +380,19 @@ section.testimonials {
     align-items: flex-start;
     padding: 18px;
   }
-
   .avatar {
     width: 72px;
     height: 72px;
   }
-
   .slides {
     height: 300px;
   }
 }
-
 /* testimonials end */
 
 /* infinite building tree start */
 section.building-tree {
   text-align: center;
   background: #f7f7f7f7;
-  padding: 20px 0;
 }
-
-section.building-tree iframe {
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
 /* infinite building tree end */
-
-/* Back to top button - handled in assets/css/back-to-top.css */
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .header {
-    height: 70vh;
-  }
-
-  .header-content {
-    padding: 0 20px;
-  }
-
-  .welcome-section .section {
-    padding: 3rem 0 2rem 0;
-    min-height: auto;
-  }
-
-  .welcome-section .card {
-    padding: 2rem 1.5rem;
-    margin: 1.5rem 0;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .welcome-section .card h1 {
-    font-size: clamp(22px, 5vw, 28px);
-    margin-bottom: 1.5rem;
-  }
-
-  .welcome-section .card p {
-    line-height: 1.7;
-    font-size: clamp(14px, 3vw, 16px);
-  }
-
-  section.get-started {
-    padding: 2rem 0 3rem 0;
-  }
-
-  .cards-hover {
-    grid-template-columns: 1fr;
-    padding: 15px;
-    gap: 25px;
-    max-width: 100%;
-  }
-
-  .card-hover {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .card-hover-image {
-    height: 180px;
-  }
-
-  .card-hover-image img {
-    width: 95%;
-    height: 85%;
-    object-fit: contain;
-    margin: 7.5% auto;
-    display: block;
-  }
-
-  .card-hover-content {
-    padding: 20px;
-  }
-
-  .card-hover h3 {
-    font-size: clamp(18px, 4vw, 22px);
-    margin-bottom: 12px;
-  }
-
-  .card-hover p {
-    font-size: clamp(14px, 3vw, 16px);
-    line-height: 1.6;
-  }
-
-  .testimonials {
-    padding: 2rem 0;
-  }
-
-  .testimonials-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .carousel {
-    padding: 20px;
-  }
-
-  .controls {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 20px;
-    justify-content: center;
-  }
-
-  section.building-tree iframe {
-    height: 300px !important;
-    margin: 0 10px;
-  }
-
-  /* back-to-top sizing is delegated to assets/css/back-to-top.css */
-}
-
-@media (max-width: 480px) {
-  .header {
-    height: 60vh;
-  }
-
-  .header-content {
-    padding: 0 15px;
-  }
-
-  .welcome-section .section {
-    padding: 2rem 0 1.5rem 0;
-  }
-
-  .welcome-section .container {
-    padding: 0 15px;
-  }
-
-  .welcome-section .card {
-    padding: 1.5rem 1rem;
-    margin: 1rem 0;
-    border-radius: 16px;
-  }
-
-  .welcome-section .card h1 {
-    font-size: clamp(20px, 6vw, 24px);
-    margin-bottom: 1rem;
-  }
-
-  section.get-started {
-    padding: 1.5rem 0 2rem 0;
-  }
-
-  .cards-hover {
-    padding: 10px;
-    gap: 20px;
-  }
-
-  .card-hover {
-    margin: 0 5px;
-    border-radius: 12px;
-  }
-
-  .card-hover-image {
-    height: 300px;
-    /* slightly larger container on very small screens */
-  }
-
-  .card-hover-image img {
-    width: 85%;
-    height: 80%;
-    /* increase from 75% to 80% */
-    object-fit: contain;
-    margin: 12.5% auto;
-    display: block;
-  }
-
-  .card-hover-content {
-    padding: 16px;
-  }
-
-  .card-hover h3 {
-    font-size: clamp(16px, 4vw, 20px);
-    margin-bottom: 8px;
-  }
-
-  .card-hover p {
-    font-size: clamp(13px, 3vw, 15px);
-    line-height: 1.5;
-  }
-
-  .wrap {
-    padding: 0 15px;
-  }
-
-  .carousel {
-    padding: 15px;
-  }
-
-  .slide {
-    padding: 15px;
-  }
-
-  section.building-tree iframe {
-    height: 250px !important;
-    margin: 0 5px;
-  }
-}
-
-/* Touch improvements for mobile */
-@media (hover: none) and (pointer: coarse) {
-  .card-hover {
-    transform: none;
-  }
-
-  .btn {
-    padding: 12px 16px;
-    font-size: 16px;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-  }
-}
